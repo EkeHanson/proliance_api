@@ -36,9 +36,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',  # if using social login
-
+    'django_filters',
     'users',
     'user_messages',
+    'license_key',
 ]
 
 MIDDLEWARE = [
@@ -100,19 +101,24 @@ DATABASES = {
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
-
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',
     ],
-
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 15,  # Set default page size to 15 items
+    'DEFAULT_AUTHENTICATION_CLASSES': [],  # Empty list means no authentication required
 }
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework.authentication.TokenAuthentication',
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     ],
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.IsAuthenticated',
+#     ],
+
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#     'PAGE_SIZE': 15,  # Set default page size to 15 items
+# }
 
 
 SIMPLE_JWT = {
@@ -134,20 +140,26 @@ SIMPLE_JWT = {
 
 
 # Email configuration
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'  # Your SMTP server address
+# EMAIL_PORT = 587  # Your SMTP server port (587 is the default for SMTP with TLS)
+# EMAIL_USE_TLS = True  # Whether to use TLS (True by default)
+# EMAIL_HOST_USER = 'prolianzltd@gmail.com'  # Your email address
+# EMAIL_HOST_PASSWORD = 'rvmd ujys hvyf xbla'  # Your email password or app-specific password if using Gmail, etc.
+# DEFAULT_FROM_EMAIL = 'prolianzltd@gmail.com'  # The default email address to use for sending emails
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # Your SMTP server address
-EMAIL_PORT = 587  # Your SMTP server port (587 is the default for SMTP with TLS)
-EMAIL_USE_TLS = True  # Whether to use TLS (True by default)
-EMAIL_HOST_USER = 'prolianzltd@gmail.com'  # Your email address
-EMAIL_HOST_PASSWORD = 'rvmd ujys hvyf xbla'  # Your email password or app-specific password if using Gmail, etc.
-DEFAULT_FROM_EMAIL = 'prolianzltd@gmail.com'  # The default email address to use for sending emails
-
+EMAIL_HOST = 'mail.privateemail.com'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'support@cmvp.net'
+EMAIL_HOST_PASSWORD = 'qwertyqwerty'
+DEFAULT_FROM_EMAIL = 'support@cmvp.net'
 # rvmd ujys hvyf xbla
 
 
 # Configure CORS
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://localhost:5173",
     "https://swiftlookv1.vercel.app/" # Add your frontend's origin here
     # Add any other origins you want to allow
 ]

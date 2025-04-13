@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "simservicetestpleaces",
+  "private_key_id": "1141310763c61a2f6c1233e318b51ae60dd8eaa2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDLUnPFMjWtu3KQ\n6zM2sPqOyeIWzjYJa7/bsQj+jT5dJH3Q6shoogS2Wm9st46Wg/6ttEJCZC9yrlKf\nfl75yjFapwtYifCRtHPwED5fgHYThE9LDpybBXMP8Ntdw4OEWRFGMOUpB8KuAuh9\nfEjmEaR33JAaaqZnbE/XGq3weFsmbgd1UwtxdyjRSTwE2h/+KvZabYGwuWqXfBgn\neMZuOySv4QxP4/i9hZGmLCG1WIVywSdwlic1KRGqwGXrTEaR9q6+ExoMUSWjM4jU\n0l6HVhHIw7wpNPQz83YqNkYyz9E4QFZ0wYxIYtZGP5lENUDaxCnfUf4roZi2g3Er\ner3KA3svAgMBAAECggEATRsEL2zmoW98N4wSnHOKWZsjA/4IzRLRLAnbvNkopN8B\nXbij7tY+jj8GkYac6uS8sPgyxoXC3q1QRQ8CCp2MkPHXYijRlBgIfapTVRlc7fLX\ntUGhz0JGS+3N6yWJmyfB3soNJb29LQuKSohXBvT617/L4FDAsWkIcC08eHzUKGKV\nogEA7Yw6erj7/GOnEm99fqgopJq6G+vWoztyvYLaliVHwvoW2WW0haaMmfSnFtrL\nF+748y9mdKzndiwSjWs+ewTmb0KjtzbVf/Ln3+3GXXYZF7vXk3Ew+E43qLyBlSIu\nacZmtTpf4V2dQ1SS29AyN6o9g+IvfdAMIVcUh7jgDQKBgQDmRhJyR6R3k7d+W+5o\nnjZvZQInS3moASHxzXHtqNwQqLuq/LtLZ+FnnbSS/fFEEJAhvyhOSOccrmXMKovf\nHl3G+ufSFSAr896nMLY0pkMyaYEpdacOVzW6K1PtSp8HkIzbT/MDHogHXFk2vNX6\nfRTXls/tTzdf5l0O+dPjompLpQKBgQDiCY02jBTpv7Bgi7+sIDyMSvEQa7bAuK8M\nx8Fu07lW203Mu/4KYLlRGpRYKmjOHgeynkulbgSZ90G1V3dSG/q39KiLVVyRE3C0\npBnGld6HOsA0u6FkrroIQ8LAVVjRGHzBNmGQNSXxcCEPPu0f1A0GArAA7NDxjNDq\nu0XQVdfDQwKBgQCHYJC9sNLHHgfVeLSLut/j021VrrCiDbBoGNEu2IQwIxLZrmVq\nKnNA2F1twW+TBW3G+Tv38jI1EW51flnm3VJiheW+A397d47hmei0wT5mJ9KwjiOd\ncbX7cjeQHLur1daJpNIIdm2gbjFg1dmyvtB/AoHRUS4L6kGxaTyh6j01pQKBgBy/\nWD1avYIpBfaRb3QluW2iTlxnRpvmISU/9oLw3H6Gb7OdKScKvCbreXhpFGE6goIe\nDcLhZiZqwumcUSmZM17X9+OYnKg6z7e5symFgAK03yMVxeX3LuPEMm2hrSUStzMf\nhnL/v26gcyPsPd4xauKbzuSfOceuwBdKcAuaD1HfAoGAc+HqKESjlj2FrU+buW0W\nJhyoKc2qIlYEQrrdgzHfHQLMxuLDk7TqbjG/1wIlbJB9olNih9i6oF6In8CMN8aR\nN4+TFlPdVsandqjOwR65FN3H9+JHelVRdV4EK0DpbmKMcKhJW3y1dJW3PRg8yo2X\nscQflAfdB2dcBErX0PyxM1o=\n-----END PRIVATE KEY-----\n",
+  "client_email": "ga4-admin-dashboard@simservicetestpleaces.iam.gserviceaccount.com",
+  "client_id": "108186718052452302969",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ga4-admin-dashboard%40simservicetestpleaces.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
