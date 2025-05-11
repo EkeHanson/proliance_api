@@ -13,6 +13,7 @@ urlpatterns = [
     path('api/users/', include('users.urls')),
     path('api/user_messages/', include('user_messages.urls')),
     path('api/license_key/', include('license_key.urls')),
+    path('api/issues_log/', include('issues_log.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]

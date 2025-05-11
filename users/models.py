@@ -14,11 +14,17 @@ class CustomUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
     
-    def create_superuser(self, email, password, **extra_fields):
+    def create_superuser(self, email, password, phone=None, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('user_type', 'admin')
-        return self.create_user(email, password, **extra_fields)
+        
+        if extra_fields.get('is_staff') is not True:
+            raise ValueError('Superuser must have is_staff=True.')
+        if extra_fields.get('is_superuser') is not True:
+            raise ValueError('Superuser must have is_superuser=True.')
+        
+        return self.create_user(email, password, phone or '0000000000', **extra_fields)
 
 class CustomUser(AbstractBaseUser):
     phone = models.CharField(max_length=15)
@@ -29,19 +35,17 @@ class CustomUser(AbstractBaseUser):
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
-
-    username = models.CharField(max_length=80, unique=False, blank=True, null=True)
     email = models.EmailField(max_length=80, unique=True)
+    username = models.CharField(max_length=80, unique=False, blank=True, null=True)
     
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['phone']
+    REQUIRED_FIELDS = ['phone', 'first_name', 'last_name']
 
     def __str__(self):
         return self.email
 
-    # Add these methods for permission checks
     def has_perm(self, perm, obj=None):
         return self.is_superuser
 
